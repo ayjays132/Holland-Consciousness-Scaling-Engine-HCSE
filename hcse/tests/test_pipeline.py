@@ -41,3 +41,28 @@ def test_trainer_integration():
     trainer.add_callback(TrainerCallback())
     result = trainer.train(resume_from_checkpoint=None)
     assert result.training_loss is not None
+
+
+def test_compute_loss_uses_bonus():
+    model = DummyModel(4)
+    args = TrainingArguments(
+        output_dir="/tmp/hcse-tests",
+        per_device_train_batch_size=1,
+        num_train_epochs=1,
+    )
+    trainer = HfTrainerWithHCSE(
+        model=model,
+        args=args,
+        train_dataset=DummyDataset(),
+        hcse_params={"layer": 0, "lambda_c": 1.0},
+    )
+
+    inputs = {"input_ids": torch.randn(2, 4), "labels": torch.randn(2, 4)}
+    baseline_loss = model.forward(**inputs, output_hidden_states=True).loss
+    expected_loss = model.forward_with_hcse(
+        **inputs, hcse_params={"layer": 0, "lambda_c": 1.0}
+    ).loss
+    trainer_loss = trainer.compute_loss(model, inputs)
+
+    assert torch.allclose(trainer_loss, expected_loss)
+    assert trainer_loss < baseline_loss
