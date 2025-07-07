@@ -1,5 +1,6 @@
 import torch
 from hcse.core import HCSEMixin
+from hcse.utils import corrcoef, info_nce_loss
 
 
 class BaseModel(torch.nn.Module):
@@ -36,3 +37,16 @@ def test_bonus_application():
     input_ids = torch.randn(2, 3, 4)
     outputs = model.forward_with_hcse(input_ids, hcse_params={"layer": 0})
     assert hasattr(outputs, "loss")
+
+
+def test_corrcoef_basic():
+    x = torch.tensor([[1.0, 2.0], [3.0, 4.0]])
+    corr = corrcoef(x)
+    expected = torch.ones(2, 2)
+    assert torch.allclose(corr, expected, atol=1e-6)
+
+
+def test_info_nce_loss_identity():
+    feats = torch.eye(3)
+    loss = info_nce_loss(feats)
+    assert loss < 1e-2
