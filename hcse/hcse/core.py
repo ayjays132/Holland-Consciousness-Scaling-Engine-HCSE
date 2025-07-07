@@ -21,7 +21,14 @@ class HCSEMixin(nn.Module):
         self.info_nce_head = nn.Linear(int(hidden_size), int(hidden_size), bias=False)
 
     def compute_hcse_surrogates(self, hidden_states: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
-        """Compute HCSE surrogates for a layer's hidden states."""
+        """Compute HCSE surrogates for a layer's hidden states.
+
+        The input tensor is flattened across batch and sequence dimensions so
+        that each row corresponds to a single activation vector. Integration
+        efficiency is measured with an InfoNCE head, connectivity density uses
+        the absolute off-diagonal correlations, and activation energy is the
+        mean squared value.
+        """
         if hidden_states.dim() == 2:
             flat = hidden_states
         else:
