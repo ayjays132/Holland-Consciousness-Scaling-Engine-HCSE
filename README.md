@@ -1,3 +1,35 @@
+# HCSE - Holland Consciousness Scaling Engine
+
+[![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)](https://github.com/holland/hcse/actions/workflows/ci.yml)
+
+Python package implementing the Holland Consciousness Scaling Engine as an addon for HuggingFace models.
+
+## Installation
+
+```bash
+pip install hcse
+```
+
+## Quickstart
+
+```python
+from hcse.core import HCSEMixin
+from transformers import AutoModelForCausalLM
+
+class ModelWithHCSE(HCSEMixin, AutoModelForCausalLM):
+    pass
+
+model = ModelWithHCSE.from_pretrained("gpt2", hidden_size=768)
+```
+
+## API
+
+* `HCSEMixin.compute_hcse_surrogates(hidden_states)` – returns η, ρ, Ė.
+* `HCSEMixin.forward_with_hcse(*args, hcse_params, **kwargs)` – computes loss with bonus.
+* `HfTrainerWithHCSE` – drop-in replacement for `Trainer` applying HCSE.
+
+---
+
 **“HCSE: The Holland Consciousness Scaling Engine”**
 *A Premium, Emoji-Rich Research Overview*
 
