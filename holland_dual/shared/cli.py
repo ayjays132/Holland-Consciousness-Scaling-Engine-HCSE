@@ -7,6 +7,7 @@ from typing import Optional
 import typer
 
 from holland_dual.quantum.huqce.simulation import HuqceParams, HuqceSimulator
+from holland_dual.quantum.huqce.analysis import spectral_entropy
 from holland_dual.fusion.adapter import simulation_to_activation
 
 app = typer.Typer(help="Holland Dual CLI")
@@ -31,6 +32,16 @@ def hdf_fuse() -> None:
     print(acts.shape)
 
 
+@app.command()
+def hdq_analyze(steps: int = 50) -> None:
+    """Run simulation and print spectral entropy."""
+    params = HuqceParams(steps=steps)
+    sim = HuqceSimulator(params)
+    psi = sim.run()
+    ent = spectral_entropy(psi)
+    print(f"spectral entropy: {ent:.4f}")
+
+
 cli = app
 
-__all__ = ["cli"]
+__all__ = ["cli", "hdq_sim", "hdf_fuse", "hdq_analyze"]

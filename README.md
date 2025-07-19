@@ -39,6 +39,7 @@ Install in editable mode and run a short simulation:
 ```bash
 pip install -e .
 hdq-cli hdq-sim
+hdq-cli hdq-analyze --steps 10
 ```
 ---
 
