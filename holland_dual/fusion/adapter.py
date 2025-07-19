@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 from holland_dual.quantum.huqce.simulation import HuqceParams, HuqceSimulator
-from holland_dual.cognition.hcse.core import HCSEMixin
+from hcse.core import HCSEMixin
 
 
 def simulation_to_activation(params: HuqceParams) -> torch.Tensor:
