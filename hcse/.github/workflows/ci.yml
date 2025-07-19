@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install flake8 mypy pytest torch transformers
+      - run: pip install flake8 mypy pytest torch transformers accelerate>=0.26.0
       - run: flake8 hcse
       - run: mypy hcse
       - run: pytest
