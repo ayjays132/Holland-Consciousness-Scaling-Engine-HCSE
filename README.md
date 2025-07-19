@@ -175,3 +175,15 @@ psi = HuqceSimulator(params).run()
 ```
 
 This addition demonstrates how chaotic dynamics can be integrated alongside HCSE's cognitive metrics.
+
+## Testing
+
+The test suite requires the optional [accelerate](https://github.com/huggingface/accelerate) package.
+Install the development dependencies and run `pytest`:
+
+```bash
+pip install -e .[accelerate]
+pytest
+```
+
+`accelerate` is optional for using the library itself but needed for running tests.

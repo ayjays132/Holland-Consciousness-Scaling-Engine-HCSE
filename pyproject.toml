@@ -12,6 +12,9 @@ dependencies = [
     "transformers",
 ]
 
+[project.optional-dependencies]
+accelerate = ["accelerate>=0.26.0"]
+
 [project.scripts]
 hdq-cli = "holland_dual.shared.cli:cli"
 
