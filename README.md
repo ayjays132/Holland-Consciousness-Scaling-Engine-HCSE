@@ -5,6 +5,8 @@ This repository now provides a unified package `holland_dual` combining the exis
 HCSE cognition tools with HUQCE quantum simulations. A CLI entrypoint `hdq-cli` exposes
 basic commands to run simulations and demonstrate the fusion adapter.
 
+![HCSE Overview](docs/hcse_overview.svg)
+
 [![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)](https://github.com/holland/hcse/actions/workflows/ci.yml)
 
 Python package implementing the Holland Consciousness Scaling Engine as an addon for HuggingFace models.
