@@ -147,3 +147,18 @@ HCSE—the **Holland Consciousness Scaling Engine**—offers a **first-of-its-ki
 
 ✨ **Keywords:** Consciousness Scaling, Integration Surrogates, Connectivity Density, Activation Energy, Phase-Transition Learning, HCSE.
 😊 **Acknowledgments:** To Phillip Holland for inspiring the Holland Consciousness Scaling Engine!
+
+## HUQCE Quantum Simulation Module
+
+The repository now includes an experimental implementation of the **Holland Unified Quantum Chaos Equation (HUQCE)** for one-dimensional systems. A minimal simulator is located under `huqce/` with tests ensuring basic norm conservation.
+
+Example usage:
+
+```python
+from huqce.simulation import HuqceParams, HuqceSimulator
+
+params = HuqceParams(steps=50)
+psi = HuqceSimulator(params).run()
+```
+
+This addition demonstrates how chaotic dynamics can be integrated alongside HCSE's cognitive metrics.
