@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+title: "Holland Dual Stack"
+authors:
+  - family-names: Holland
+    given-names: Phillip
+message: "Please cite the Holland Dual Stack if you use this code."

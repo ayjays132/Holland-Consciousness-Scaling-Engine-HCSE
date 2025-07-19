@@ -1,0 +1,25 @@
+[project]
+name = "holland_dual"
+version = "0.1.0"
+authors = [{name="Phillip Holland"}]
+description = "Holland Dual Stack: HUQCE + HCSE"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "torch",
+    "typer",
+    "transformers",
+]
+
+[project.scripts]
+hdq-cli = "holland_dual.shared.cli:cli"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["holland_dual*", "hcse*", "huqce*"]
+exclude = ["hcse*", "huqce*"]
