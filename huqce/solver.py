@@ -61,10 +61,10 @@ def crank_nicolson_step(
     return psi_next
 
 
-def compute_momentum_expectation(psi: ArrayLike, dx: float) -> float:
+def compute_momentum_expectation(psi: ArrayLike, dx: float) -> complex:
     grad = np.gradient(psi, dx)
     expectation = np.sum(np.conj(psi) * (-1j * grad)) * dx
-    return float(np.real(expectation))
+    return expectation
 
 
 __all__ = ["crank_nicolson_step", "compute_momentum_expectation"]
