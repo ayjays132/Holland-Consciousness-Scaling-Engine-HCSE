@@ -189,3 +189,37 @@ pytest
 ```
 
 `accelerate` is optional for using the library itself but needed for running tests.
+
+## 🌟 Key Features
+
+- 🚀 **Consciousness-inspired metrics** for integration, connectivity, and energy.
+- 🔗 **Plug-and-play mixins** for HuggingFace models.
+- 🧠 **Huqce quantum simulator** fused with HCSE cognition.
+- 🛠️ **CLI tooling** via `hdq-cli` for quick experimentation.
+
+## 🛠 Development Setup
+
+Set up a local environment with all extras:
+
+```bash
+git clone https://github.com/holland/hcse.git
+pip install -e .[accelerate]
+```
+
+Run the full test suite:
+
+```bash
+pytest
+```
+
+## 🤝 Contributing
+
+Issues and pull requests are welcome! For major changes, please open a discussion first to ensure alignment with the project goals.
+
+## 🚦 Disclaimer
+
+HCSE is a research prototype. The consciousness metrics are theoretical surrogates and do not endow models with actual awareness. Use responsibly.
+
+## 📜 License & Citation
+
+This project is licensed under the Apache-2.0 License. See [CITATION.cff](CITATION.cff) for citation instructions.
