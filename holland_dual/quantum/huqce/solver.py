@@ -63,7 +63,8 @@ def crank_nicolson_step(
 
 def compute_momentum_expectation(psi: ArrayLike, dx: float) -> float:
     grad = np.gradient(psi, dx)
-    return float(np.sum(np.conj(psi) * (-1j * grad)) * dx)
+    expectation = np.sum(np.conj(psi) * (-1j * grad)) * dx
+    return float(np.real(expectation))
 
 
 __all__ = ["crank_nicolson_step", "compute_momentum_expectation"]
