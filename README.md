@@ -1,4 +1,9 @@
 # HCSE - Holland Consciousness Scaling Engine
+## Holland Dual Stack
+
+This repository now provides a unified package `holland_dual` combining the existing
+HCSE cognition tools with HUQCE quantum simulations. A CLI entrypoint `hdq-cli` exposes
+basic commands to run simulations and demonstrate the fusion adapter.
 
 [![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)](https://github.com/holland/hcse/actions/workflows/ci.yml)
 
@@ -28,6 +33,13 @@ model = ModelWithHCSE.from_pretrained("gpt2", hidden_size=768)
 * `HCSEMixin.forward_with_hcse(*args, hcse_params, **kwargs)` – computes loss with bonus.
 * `HfTrainerWithHCSE` – drop-in replacement for `Trainer` applying HCSE.
 
+### CLI Example
+
+Install in editable mode and run a short simulation:
+```bash
+pip install -e .
+hdq-cli hdq-sim
+```
 ---
 
 **“HCSE: The Holland Consciousness Scaling Engine”**
