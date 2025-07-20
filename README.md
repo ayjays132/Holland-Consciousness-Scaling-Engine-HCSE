@@ -9,6 +9,8 @@ basic commands to run simulations and demonstrate the fusion adapter.
 
 [![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)](https://github.com/holland/hcse/actions/workflows/ci.yml)
 
+[![CI](https://github.com/ayjays132/Holland-Consciousness-Scaling-Engine-HCSE/blob/main/performance_comparison.png)
+
 Python package implementing the Holland Consciousness Scaling Engine as an addon for HuggingFace models.
 
 ## Installation
