@@ -7,7 +7,7 @@ basic commands to run simulations and demonstrate the fusion adapter.
 
 ![HCSE Overview](docs/hcse_overview.svg)
 
-[![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)](https://github.com/holland/hcse/actions/workflows/ci.yml)
+[![CI](https://github.com/holland/hcse/actions/workflows/ci.yml/badge.svg)
 
 [![CI](https://github.com/ayjays132/Holland-Consciousness-Scaling-Engine-HCSE/blob/main/performance_comparison.png)
 
