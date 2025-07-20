@@ -204,7 +204,7 @@ pytest
 Set up a local environment with all extras:
 
 ```bash
-git clone https://github.com/holland/hcse.git
+git clone [https://github.com/holland/hcse.git](https://github.com/ayjays132/Holland-Consciousness-Scaling-Engine-HCSE.git)
 pip install -e .[accelerate]
 ```
 
