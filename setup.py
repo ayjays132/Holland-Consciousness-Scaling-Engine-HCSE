@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 # Project metadata
 NAME = "hcse"                       # pip install NAME
-VERSION = "0.1.0"                   # update on each release
+VERSION = "0.1.4"                   # update on each release
 DESCRIPTION = "Holland-Consciousness-Scaling-Engine (HCSE)"
 URL = "https://github.com/ayjays132/Holland-Consciousness-Scaling-Engine-HCSE"
 AUTHOR = "Phillip Holland"
